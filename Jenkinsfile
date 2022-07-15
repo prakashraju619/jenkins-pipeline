@@ -21,7 +21,7 @@ pipeline {
     stage('Docker  Run') {
       steps {
         script {
-            sh 'docker run -d  -p 6000:4000 nodeapp-1'
+            sh 'docker run -d  -p 3000:3000 nodeapp-1'
         }
 
       }
