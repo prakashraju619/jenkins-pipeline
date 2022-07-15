@@ -10,16 +10,15 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-           docker build -t node-app-img .
-
+         docker build -t node-app-image .
         }
       }
     }
 
-    stage('Deploy Run') {
+    stage('Deploy Image') {
       steps{
         script {
-         docker run -d -p 6000:4000 --name node-app-conc node-app-image
+          docker run -d -p 6000:4000 --name node-app-conc node-app-image
 
           }
         }
@@ -28,12 +27,4 @@ pipeline {
 
     }
 
-
-
    
-   
-    
-      
-
-
-
