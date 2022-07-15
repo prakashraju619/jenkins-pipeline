@@ -1,5 +1,7 @@
 pipeline {
- 
+ environment{
+  dockerImage=""
+ }
   agent any
   stages {
     stage('Cloning Git') {
@@ -11,7 +13,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          dockerImage =  'docker build -t node-app-image .'
+          dockerImage =  docker build -t node-app-image .
         }
       }
     }
