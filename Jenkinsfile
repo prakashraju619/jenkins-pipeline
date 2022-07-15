@@ -11,7 +11,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          dockerImage =  docker build -t node-app-image .
+          dockerImage =  'docker build -t node-app-image .'
         }
       }
     }
