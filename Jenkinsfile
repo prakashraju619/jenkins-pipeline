@@ -15,14 +15,7 @@ pipeline {
         }
       }
     }
-    stage('Deploy Image') {
-      steps{
-        script {
-            docker run -d -p 6000:4000 --name node-app-conc node-app-image
-
-          }
-        }
-      }
+   
     }
     
   }
