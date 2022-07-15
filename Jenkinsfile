@@ -8,7 +8,7 @@ pipeline {
         }
     }
 
-    stages {
+    
         stage('Docker file creating') {
             steps {
                 sh "docker build  -t node-jk-app . "
@@ -16,5 +16,5 @@ pipeline {
                 
             }
         }
-    }
+   
 }
