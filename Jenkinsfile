@@ -9,7 +9,7 @@ pipeline {
       }
     }
 
-    stage('Cloning Git') {
+    stage('Image Build') {
       steps {
         script {
             sh 'docker build -t nodeapp-1 .'
