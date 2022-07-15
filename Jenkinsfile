@@ -10,7 +10,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          dockerImage = docker -t node-app-image .
+         sh 'docker -t node-app-image .'
         }
       }
     }
@@ -18,7 +18,7 @@ pipeline {
     stage('Deploy Image') {
       steps{
         script {
-          docker run -d -p 6000:4000 --name node-app-conc node-app-image
+          sh'docker run -d -p 6000:4000 --name node-app-conc node-app-image'
 
           }
         }
@@ -26,3 +26,8 @@ pipeline {
     }
 
     }
+ 
+      
+}
+
+
