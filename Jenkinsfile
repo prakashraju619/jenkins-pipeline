@@ -8,10 +8,9 @@ pipeline {
         }
 		stage('Docker file creating') {
             steps {
-              
-		 sh "sudo systemctl start docker"
-		 sh "docker build  -t node-jk-app . "
-                sh" docker run -d -p 7000:4000 --name node-jp-conc" 
+              	sh 'systemctl start docker'
+		 sh 'docker build -t node-jk-app .'
+                sh 'docker run -d -p 7000:4000 --name node-jp-conc'
                
                 
                 
