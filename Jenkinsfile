@@ -8,7 +8,9 @@ pipeline {
         }
 		stage('Docker file creating') {
             steps {
-               echo "hellow second"
+              
+		 sh "docker build  -t node-jk-app . "
+                sh" docker run -d -p 7000:4000 --name node-jp-conc" 
                
                 
                 
