@@ -1,7 +1,7 @@
 pipeline {
   parameters {
-  (string defaultValue: 'Dev', description: 'Clone from Repo', name: 'ENV')
-  (string defaultValue: 'Dev', description: 'from Branch to deploy', name: 'BRANCH')
+  string (defaultValue: 'Dev', description: 'Clone from Repo', name: 'ENV')
+  string (defaultValue: 'Dev', description: 'from Branch to deploy', name: 'BRANCH')
 }
  
   agent any
