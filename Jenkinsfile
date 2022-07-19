@@ -3,8 +3,8 @@ pipeline {
   string (defaultValue: 'Dev', description: 'Clone from Repo', name: 'ENV')
   string (defaultValue: 'Dev', description: 'from Branch to deploy', name: 'BRANCH')
 }
- 
-  agent any
+agent { label 'dev' }
+
   stages {
     stage('Cloning Git') {
       steps {
